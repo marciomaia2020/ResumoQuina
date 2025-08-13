@@ -947,12 +947,14 @@
                 let acumuladoInfoHTML = '';
                 if (concurso.acumulou && (concurso.valorAcumuladoProximoConcurso > 0 || concurso.valorAcumuladoConcursoEspecial > 0)) {
                     acumuladoInfoHTML = `
+					<!--
                         <div class="acumulado-info">
                             ${concurso.valorAcumuladoProximoConcurso > 0 ? 
                                 `<p>Valor acumulado para o próximo concurso: <strong>${formatarMoeda(concurso.valorAcumuladoProximoConcurso)}</strong></p>` : ''}
                             ${concurso.valorAcumuladoConcursoEspecial > 0 ? 
                                 `<p>Valor acumulado para o concurso especial de São João: <strong>${formatarMoeda(concurso.valorAcumuladoConcursoEspecial)}</strong></p>` : ''}
                         </div>
+					-->
                     `;
                 }
                 
